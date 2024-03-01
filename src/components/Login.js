@@ -23,7 +23,7 @@ const Login = () => {
         </h1>
         {!isSignInForm && (
           <input 
-            type="text" 
+            type="text"     
             placeholder='Full Name'
             className='p-4 my-4 w-full bg-gray-700' 
         />
