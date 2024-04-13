@@ -7,7 +7,7 @@ import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO, SUPPORTED_LANGUAGES} from "../utils/constants";
 import { toggleGptSearchView } from '../utils/gptSlice';
 import { changeLanguage } from '../utils/configSlice';
-
+ 
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -78,16 +78,15 @@ const handleLanguageChange = (e) => {
        className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg'
        onClick={handleGptSearchClick}
        >
-        {showGptSearch ? "Homepage" : "GPT Search"} 
+        {showGptSearch ? "Home" : "GPT Search"} 
        </button>
-      <img 
-        className='hidden md:block w-12 h-12'
-        alt="usericon" 
-        src={user?.photoURL}
-      />
-      <button onClick={handleSignOut} className="font-bold text-white">
-        (Sign Out)
-      </button>
+       
+      <button 
+           onClick= {handleSignOut} 
+           className="py-2 px-4 mx-4 my-2 bg-red-600 text-white rounded-lg sm:font-bold"
+          >
+            Sign out
+          </button>
     </div>
 )}
   </div>

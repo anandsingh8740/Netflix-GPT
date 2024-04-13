@@ -19,6 +19,7 @@ const searchMovieTMDB = async (movie) => {
          "&include_adult=false&language=en-US&page=1",
        API_OPTIONS
   );
+  
    
   const json = await data.json()
    return json.results;
